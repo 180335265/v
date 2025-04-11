@@ -1,0 +1,103 @@
+{
+  "id": "deepseek.boxjs",
+  "name": "deepseek@BOXJS",
+  "author": "@DeepSeek",
+  "icon": "https://deepseek.com/favicon.ico",
+  "repo": "https://github.com/deepseek-ai",
+  "desc": "DeepSeek-V3 API 配置（代理地址: api.siliconflow.cn）",
+  "date": "更新日期：2024-06-10",
+  "apps": [
+    {
+      "id": "deepseek_api_config",
+      "name": "DeepSeek-V3 API 配置",
+      "keys": [
+        "deepseek_api_key",
+        "deepseek_api_base_url",
+        "deepseek_api_model",
+        "deepseek_api_temperature"
+      ],
+      "descs_html": [
+        "配置 DeepSeek-V3 API 参数",
+        "代理地址: <code>https://api.siliconflow.cn/</code>",
+        "默认模型: <code>deepseek-ai/DeepSeek-V3</code>"
+      ],
+      "settings": [
+        {
+          "id": "deepseek_api_key",
+          "name": "API Key",
+          "val": "sk-ghmenbzupduvnzttbhfsnauvjndqxaguknygswdzcquxnytb",
+          "type": "textarea",
+          "rows": 1,
+          "desc": "您的 DeepSeek API Key（已默认填写）"
+        },
+        {
+          "id": "deepseek_api_base_url",
+          "name": "代理地址",
+          "val": "https://api.siliconflow.cn/",
+          "type": "textarea",
+          "rows": 1,
+          "desc": "DeepSeek API 代理地址"
+        },
+        {
+          "id": "deepseek_api_model",
+          "name": "模型名称",
+          "val": "deepseek-ai/DeepSeek-V3",
+          "type": "textarea",
+          "rows": 1,
+          "desc": "默认模型: deepseek-ai/DeepSeek-V3"
+        },
+        {
+          "id": "deepseek_api_temperature",
+          "name": "回答随机性",
+          "val": "0.7",
+          "type": "selects",
+          "items": [
+            { "key": "0.2", "label": "严谨（低随机性）" },
+            { "key": "0.7", "label": "平衡（推荐）" },
+            { "key": "1.0", "label": "创意（高随机性）" }
+          ],
+          "desc": "值越高，回答越多样化"
+        }
+      ],
+      "icons": [
+        "https://deepseek.com/favicon.ico",
+        "https://deepseek.com/favicon.ico"
+      ],
+      "author": "@DeepSeek",
+      "repo": "https://github.com/deepseek-ai"
+    },
+    {
+      "id": "deepseek_chat_assistant",
+      "name": "DeepSeek 聊天助手",
+      "keys": [
+        "deepseek_chat_system_prompt"
+      ],
+      "descs_html": [
+        "配置聊天助手的默认行为",
+        "系统提示（System Prompt）用于定义 AI 的角色和风格"
+      ],
+      "settings": [
+        {
+          "id": "deepseek_chat_system_prompt",
+          "name": "系统提示",
+          "val": "你是 DeepSeek-V3 AI 助手，由 DeepSeek 官方提供支持。回答需专业、准确且友好。",
+          "type": "textarea",
+          "rows": 3,
+          "desc": "定义 AI 的默认行为（例如角色、语气等）"
+        }
+      ],
+      "icons": [
+        "https://deepseek.com/favicon.ico",
+        "https://deepseek.com/favicon.ico"
+      ],
+      "author": "@DeepSeek",
+      "repo": "https://github.com/deepseek-ai",
+      "scripts": [
+        {
+          "name": "测试 API 连接",
+          "script": "https://github.com/deepseek-ai/scripts/raw/main/deepseek_test.js"
+        }
+      ]
+    }
+  ]
+}
